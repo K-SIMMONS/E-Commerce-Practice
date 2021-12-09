@@ -140,9 +140,10 @@ add_action( 'widgets_init', 'e_commerce_practice_widgets_init' );
  * Enqueue scripts and styles.
  */
 function e_commerce_practice_scripts() {
+	wp_enqueue_style('bootstrap_stylesheet', get_theme_file_uri('/css/bootstrap.min.css'));
 	wp_enqueue_style( 'e-commerce-practice-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'e-commerce-practice-style', 'rtl', 'replace' );
-
+	wp_enqueue_script( 'bootstrap javascript', get_theme_file_uri() . '/js/bootstrap.min.js');
 	wp_enqueue_script( 'e-commerce-practice-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
