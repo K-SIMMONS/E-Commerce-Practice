@@ -116,6 +116,15 @@ function e_commerce_practice_content_width() {
 }
 add_action( 'after_setup_theme', 'e_commerce_practice_content_width', 0 );
 
+function admin_bar(){
+
+	if(is_user_logged_in()){
+	  add_filter( 'show_admin_bar', '__return_true' , 1000 );
+	}
+  }
+  add_action('init', 'admin_bar' );
+
+
 /**
  * Register widget area.
  *

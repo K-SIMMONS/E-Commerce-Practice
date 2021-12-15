@@ -10,21 +10,32 @@
 </head>
 <body>
 	
-<nav class = "my_nav">
-	<div class="container-fluid ">
-		<div class="row">
-
-		<?php wp_nav_menu(array(
-			'theme_location' => 'Primary'
-		)); ?>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<div class="container-fluid">
+		<a class="navbar-brand" href= "<?php echo site_url();?>">
+			<img class = "img-fluid ms-4" src = "<?php echo get_theme_file_uri('/images/video-out-logo.png'); ?>" alt ="video out logo" height= "140" width = "200">
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ms-auto px-5">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Topics</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Our Story</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" aria-current="page" href="#">Contact</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </nav>
 
 
 
-</body>
-</html>
 
 
 
